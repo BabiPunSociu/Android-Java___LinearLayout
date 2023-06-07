@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:visibility="visible"
+    android:background="@color/teal_200"
+    android:weightSum="4"
+    >
+    <!--comment : ctrl + shift + /  -->
+    <!--orientation để sắp xếp: horizontal (ngang) / vertical (dọc)-->
+    <!--
+        gravity để căn chỉnh view theo hướng: trái, phải, trên, dưới, center
+        (có thể sử dụng cùng lúc nhiều giá trị, ngăn cách bằng "|")
+    -->
+    <!--
+        visibility: là thuộc tính visible. Có 3 giá trị:
+        - visible: hiện
+        - gone: ẩn hoàn toàn
+        - invisible: ẩn nhưng giữ nguyên vị trí các view
+            khác xung quanh ( tương tự enable = false)
+    -->
+
+
+    <!--groupview 0-->
+
+
+    <!--
+        Để CHIA TỶ LỆ cho các ViewGroup:
+        b1: Đặt thuộc tính weightSum cho ViewGroup cha (bằng tổng các weight con)
+        b2: Đặt thuộc tính weight cho tất cả các ViewGroup con
+        b3: Đặt thuộc tính height=0dp (đối với orentation:vertical và ngược lại)
+        cho tất cả các ViewGroup con
+    -->
+    <!--layout_weight để xếp mức độ ưu tiên-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:background="@color/pink"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:id="@+id/tv_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pun"
+            android:textSize="35sp"
+
+            android:padding="@dimen/my_padding"
+            android:layout_margin="@dimen/my_margin"/>
+        <!--Đặt padding margin (top, right-end, bottom, left-start)-->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/NVD" />
+
+    </LinearLayout>
+
+    <!--groupview 1-->
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/red"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/my_margin"
+            android:padding="@dimen/my_padding"
+
+            android:text="@string/VTH"
+            android:textSize="35sp" />
+        <!--Đặt padding margin (top, right-end, bottom, left-start)-->
+
+    </LinearLayout>
+
+    <!--groupview 2-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:background="@color/green"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/VTH"
+            android:textSize="35sp"
+
+            android:padding="@dimen/my_padding"
+            android:layout_margin="@dimen/my_margin"/>
+        <!--Đặt padding margin (top, right-end, bottom, left-start)-->
+
+    </LinearLayout>
+
+    <!--groupview 3-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:background="@color/yellow"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/VTH"
+            android:textSize="35sp"
+
+            android:padding="@dimen/my_padding"
+            android:layout_margin="@dimen/my_margin"/>
+        <!--Đặt padding margin (top, right-end, bottom, left-start)-->
+
+    </LinearLayout>
+
+
+</LinearLayout>
